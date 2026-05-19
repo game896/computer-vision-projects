@@ -9,7 +9,7 @@ This repository contains three practical Computer Vision tasks developed as exer
 **Description:**  
 Detection and calculation of the total value of coins on images. Gold coins are valued at 1, star coins at 5.
 
-**Approach:**  
+**Approach:**
 - Image preprocessing (grayscale conversion, contrast enhancement, median blur)
 - Circle detection using **Hough Circle Transform** for two different coin sizes
 - Position-based filtering of detected circles
@@ -17,7 +17,9 @@ Detection and calculation of the total value of coins on images. Gold coins are 
 
 **Example Input:**
 
-![Input 1](res/k1.jpg)  
+![Input 1](res/k1.jpg)
+
+**Result:** MAE = **2.4** (over 10 images)
 
 ---
 
@@ -26,7 +28,7 @@ Detection and calculation of the total value of coins on images. Gold coins are 
 **Description:**  
 Counting the number of blue bones appearing in video sequences.
 
-**Approach:**  
+**Approach:**
 - Frame-by-frame video processing
 - Motion detection using frame differencing and Gaussian blur
 - Definition of Regions of Interest (ROI) in upper and lower frame parts
@@ -35,7 +37,9 @@ Counting the number of blue bones appearing in video sequences.
 
 **Example Input:**
 
-![Input 1](res/k2.gif)  
+![Input 1](res/k2.gif)
+
+**Result:** MAE = **0.8** (over 10 videos)
 
 ---
 
@@ -44,7 +48,7 @@ Counting the number of blue bones appearing in video sequences.
 **Description:**  
 Recognition of letter sequences from images using a neural network.
 
-**Approach:**  
+**Approach:**
 - Programmatic creation of training dataset from selected images
 - Image preprocessing (grayscale, binarization, erosion)
 - Automatic deskewing using Hough Line Transform
@@ -54,7 +58,9 @@ Recognition of letter sequences from images using a neural network.
 
 **Example Input:**
 
-![Input 1](res/k3.png)  
+![Input 1](res/k3.png)
+
+**Result:** Sum of distances = **9.0** (over 10 images)
 
 ---
 
@@ -66,5 +72,19 @@ Recognition of letter sequences from images using a neural network.
 - **TensorFlow / Keras** — neural network model
 - **Pandas** — ground truth data handling
 - **SciPy (ndimage)** — image rotation
+
+---
+
+## Results Summary
+
+| Task                        | Metric                  | Achieved   | Target     |
+|-----------------------------|-------------------------|------------|------------|
+| Coin Value Counting         | MAE                     | 2.4        | < 6        |
+| Blue Bones Counting         | MAE                     | 0.8        | < 1.0      |
+| Character Recognition       | Sum of Distances        | 9.0        | < 13       |
+
+---
+
+This repository serves as a collection of **Computer Vision practice projects** focusing on classical image processing techniques and basic deep learning approaches.
 
 ---
